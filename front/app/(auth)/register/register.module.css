@@ -1,0 +1,38 @@
+@tailwind components;
+
+@layer components {
+  .left-side {
+    @apply bg-[#0b41411a] min-h-screen w-full relative grid place-items-center rounded-e-[5.6px];
+  }
+  .left-circles {
+    @apply absolute top-0 left-0;
+  }
+  .right-circles {
+    @apply absolute bottom-0 right-0;
+  }
+  .right-side {
+    @apply w-full;
+  }
+  .content {
+    @apply pl-8 min-[1920px]:pl-20 pr-20 max-w-[736px] w-full;
+  }
+  .contentImage {
+    @apply 2xl:max-w-[500px] w-full max-h-[500px] h-full;
+    @media (min-height: 768px) {
+      max-width: 630px;
+      max-height: 630px;
+    }
+  }
+  .tabs {
+    @apply bg-[#F6F6F6] rounded-[20px] p-1 text-[#F1F1F1] flex gap-2;
+  }
+  .tab {
+    @apply py-[14px] text-green-500 px-[37px] text-[14px] leading-[20px] bg-transparent w-full rounded-[16px] text-center cursor-pointer hover:bg-green-500 hover:text-[#F1F1F1] transition-colors duration-300 ease-custom-ease;
+  }
+  .tab.active {
+    @apply bg-green-500 text-[#F1F1F1];
+  }
+  .tab:nth-child(2n + 1) {
+    @apply w-2/3;
+  }
+}
